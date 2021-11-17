@@ -110,7 +110,7 @@ class Project:
         try:
             self._project['Milestones'][item.fixVersion.text] += 1
             # this prop will be deleted later:
-            self._project['Issues'][-1]['milestone_name'] = item.fixVersion.text.trim()
+            self._project['Issues'][-1]['milestone_name'] = item.fixVersion.text.strip()
         except AttributeError:
             pass
 
