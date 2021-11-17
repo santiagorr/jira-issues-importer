@@ -76,7 +76,7 @@ class Project:
 
     def _append_item_to_project(self, item):
         # todo assignee
-        closed = str(item.statusCategory.get('id')) == self.doneStatusCategoryId
+        closed = str(item.status.get('id')) == self.doneStatusCategoryId
         closed_at = ''
         if closed:
             try:
